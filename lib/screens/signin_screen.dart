@@ -182,6 +182,22 @@ class _SearchScreenState extends State<LoginScreen> {
       ),
     ];
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      body: CustomScrollView(
+        slivers: <Widget>[
+          SliverAppBar(
+            leading: InkWell(
+              onTap: (){},
+            ),
+            pinned: _pinned,
+            snap: _snap,
+            floating: _floating,
+            expandedHeight: coverHeight - 90, //304,
+            backgroundColor: Colors.transparent,
+            flexibleSpace: FlexibleSpaceBar(
+              background:
+                  Image.asset("assets/images/banner.png", fit: BoxFit.cover),
+            ),
           ),
           SliverToBoxAdapter(
             child: Container(
@@ -194,6 +210,16 @@ class _SearchScreenState extends State<LoginScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
+                  Container(
+                    width: screenWidth,
+                    height: 25,
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(30.0),
+                        topRight: Radius.circular(30.0),
+                      ),
+                    ),
                   )
                 ],
               ),
@@ -219,6 +245,13 @@ class _SearchScreenState extends State<LoginScreen> {
                   style: TextStyle(
                       color: Colors.grey[600], fontWeight: FontWeight.bold),
                 ),
+                Material(
+                    child: InkWell(
+                  onTap: () {
+                    print("sign up tapped");
+                    Navigator.of(context)
+        .pushReplacementNamed(SignUpScreen.routeName);
+    },
 
                   child: Text(
                     "Sign Up",
