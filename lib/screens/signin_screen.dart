@@ -51,6 +51,80 @@ class _SearchScreenState extends State<LoginScreen> {
           key: _formKey,
           child: Column(
             children: [
+              InputTextWidget(
+                  controller: _emailController,
+                  labelText: "Email",
+                  hintText: "Enter your email",
+                  obscureText: false,
+                  keyboardType: TextInputType.emailAddress),
+              const SizedBox(
+                height: 12.0,
+              ),
+              InputTextWidget(
+                  controller: _pwdController,
+                  labelText: "Password",
+                  hintText: "Enter your password",
+                  obscureText: true,
+                  keyboardType: TextInputType.text),
+              Padding(
+                padding: const EdgeInsets.only(right: 25.0, top: 10.0),
+                child: Align(
+                    alignment: Alignment.topRight,
+                    child: Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: () {
+                          Navigator.of(context)
+                              .pushReplacementNamed(ForgotScreen.routeName);
+                        },
+                        child: Text(
+                          "Forgot password?",
+                          style: TextStyle(
+                              fontSize: 15,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.grey[700]),
+                        ),
+                      ),
+                    )),
+              ),
+              const SizedBox(
+                height: 30.0,
+              ),
+              Container(
+                height: 55.0,
+                child: ElevatedButton(
+                  onPressed: () async {
+                    if (_formKey.currentState!.validate()) {
+                      print("Sign up tapping");
+                        Navigator.of(context)
+                            .pushReplacementNamed(ProductsOverviewScreen.routeName);
+                    }
+                    Get.to(const ProductsOverviewScreen());
+                  },
+                  style: ElevatedButton.styleFrom(
+                    primary: Colors.white,
+                    elevation: 0.0,
+                    minimumSize: Size(screenWidth, 150),
+                    padding: EdgeInsets.symmetric(horizontal: 30),
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(0)),
+                    ),
+                  ),
+                  child: Ink(
+                    decoration: BoxDecoration(
+                        color: const Color(0xff1E5128), // Color(0xffF05945),
+                        borderRadius: BorderRadius.circular(12.0)),
+                    child: Container(
+                      alignment: Alignment.center,
+                      child: const Text(
+                        "Sign In",
+                        textAlign: TextAlign.center,
+                        style: TextStyle(color: Colors.white, fontSize: 25),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             ],
           )),
       const SizedBox(
@@ -108,22 +182,6 @@ class _SearchScreenState extends State<LoginScreen> {
       ),
     ];
     return Scaffold(
-      extendBodyBehindAppBar: true,
-      body: CustomScrollView(
-        slivers: <Widget>[
-          SliverAppBar(
-            leading: InkWell(
-              onTap: (){},
-            ),
-            pinned: _pinned,
-            snap: _snap,
-            floating: _floating,
-            expandedHeight: coverHeight - 90, //304,
-            backgroundColor: Colors.transparent,
-            flexibleSpace: FlexibleSpaceBar(
-              background:
-                  Image.asset("assets/images/banner.png", fit: BoxFit.cover),
-            ),
           ),
           SliverToBoxAdapter(
             child: Container(
@@ -136,16 +194,6 @@ class _SearchScreenState extends State<LoginScreen> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  Container(
-                    width: screenWidth,
-                    height: 25,
-                    decoration: const BoxDecoration(
-                      color: Colors.white,
-                      borderRadius: BorderRadius.only(
-                        topLeft: Radius.circular(30.0),
-                        topRight: Radius.circular(30.0),
-                      ),
-                    ),
                   )
                 ],
               ),
@@ -171,13 +219,6 @@ class _SearchScreenState extends State<LoginScreen> {
                   style: TextStyle(
                       color: Colors.grey[600], fontWeight: FontWeight.bold),
                 ),
-                Material(
-                    child: InkWell(
-                  onTap: () {
-                    print("sign up tapped");
-                    Navigator.of(context)
-        .pushReplacementNamed(SignUpScreen.routeName);
-    },
 
                   child: Text(
                     "Sign Up",
