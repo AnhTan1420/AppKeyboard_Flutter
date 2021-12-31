@@ -2,7 +2,7 @@
   
 import 'package:flutter/material.dart';
 import 'package:kleyboardshop/widgets/bottom_menu_bar.dart';
-import '../widgets/bottom_menu_bar.dart';
+import 'package:provider/provider.dart' show Provider;
 
 class OrdersScreen extends StatelessWidget {
   static const routeName = '/orders';
@@ -11,7 +11,7 @@ class OrdersScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final orderData = Provider.of<Orders>(context);
+     final orderData = Provider.of<Orders>(context);
     return Scaffold(
       appBar: AppBar(
         title: const Text('Your Orders'),
