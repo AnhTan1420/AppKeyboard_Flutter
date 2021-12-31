@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:kleyboardshop/screens/setting_screen.dart';
-import 'package:kleyboardshop/theme/colors.dart';
-import 'package:kleyboardshop/screens/orders_screen.dart';
-import 'package:kleyboardshop/screens/products_overview_screen.dart';
-import 'package:kleyboardshop/screens/profile.dart';
+import 'package:team2_keyboardshop_flutter/screens/setting_screen.dart';
+import 'package:team2_keyboardshop_flutter/theme/colors.dart';
+import 'package:team2_keyboardshop_flutter/screens/orders_screen.dart';
+import 'package:team2_keyboardshop_flutter/screens/products_overview_screen.dart';
+import 'package:team2_keyboardshop_flutter/screens/profile.dart';
 
 class BottomMenuBar extends StatefulWidget {
   BottomMenuBar({Key? key}) : super(key: key);
