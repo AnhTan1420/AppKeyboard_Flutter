@@ -83,42 +83,14 @@ class _ForgotState extends State<ForgotScreen> {
                           key: _formKey,
                           child: Column(
                             children: [
-                              Column(
-                                children: <Widget>[
-                                  SizedBox(
-                                    height: 300,
-                                    width: double.infinity,
-                                    child: Image.network(
-                                      loadedProduct.imageUrl,
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
-                                  const SizedBox(height: 10),
-                                  Text(
-                                    '\$${loadedProduct.price}',
-                                    style: const TextStyle(
-                                      color: Colors.red,
-                                      fontWeight: FontWeight.bold,
-                                      fontSize: 20,
-                                    ),
-                                  ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
-                                  Container(
-                                    padding: const EdgeInsets.symmetric(
-                                        horizontal: 10),
-                                    width: double.infinity,
-                                    child: Text(
-                                      loadedProduct.description,
-                                      style: const TextStyle(
-                                        fontSize: 25,
-                                      ),
-                                      textAlign: TextAlign.center,
-                                      softWrap: true,
-                                    ),
-                                  )
-                                ],
+                              InputTextWidget(
+                                  controller: _emailController,
+                                  labelText: "Email",
+                                  hintText: "Your email",
+                                  obscureText: false,
+                                  keyboardType: TextInputType.emailAddress),
+                              const SizedBox(
+                                height: 50.0,
                               ),
                               Container(
                                 height: 55.0,
