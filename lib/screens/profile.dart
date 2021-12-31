@@ -52,6 +52,75 @@ class _ProFileState extends State<ProFile> {
                   ),
                 ),
               ),
+              SizedBox(
+                height: 60.0,
+              ),
+              Text(
+                "Anh Tân",
+                style: TextStyle(
+                    fontSize: 25.0,
+                    color: Colors.black,
+                    letterSpacing: 2.0,
+                    fontWeight: FontWeight.bold),
+              ),
+              SizedBox(
+                height: 50,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.green, // background
+                      onPrimary: Colors.white, // foreground
+                    ),
+                    onPressed: () {},
+                    child: Ink(
+                      child: Container(
+                        constraints: BoxConstraints(
+                          maxWidth: 90.0,
+                          maxHeight: 150.0,
+                        ),
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Chỉnh sửa",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                              letterSpacing: 2.0,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ),
+                  ),
+                  ElevatedButton(
+                    style: ElevatedButton.styleFrom(
+                      primary: Colors.green, // background
+                      onPrimary: Colors.white, // foreground
+                    ),
+                    onPressed: () {},
+                    child: Ink(
+                      child: Container(
+                        constraints: BoxConstraints(
+                          maxWidth: 90.0,
+                          maxHeight: 150.0,
+                        ),
+                        alignment: Alignment.center,
+                        child: Text(
+                          "Đổi mật khẩu",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20.0,
+                              letterSpacing: 2.0,
+                              fontWeight: FontWeight.bold),
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              )
             ],
           ),
         ));
