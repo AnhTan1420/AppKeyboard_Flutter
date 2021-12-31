@@ -28,15 +28,7 @@ class CartScreen extends StatelessWidget {
                     style: TextStyle(fontSize: 20),
                   ),
                   const Spacer(),
-                  Chip(
-                    label: Text(
-                      '\$${cart.totalAmount.toStringAsFixed(2)}',
-                      style: TextStyle(
-                        color: Theme.of(context).primaryTextTheme.headline6!.color,
-                      ),
-                    ),
-                    backgroundColor: Theme.of(context).primaryColor,
-                  ),
+
 
                   FlatButton(
                     child: const Text('ORDER NOW'),
