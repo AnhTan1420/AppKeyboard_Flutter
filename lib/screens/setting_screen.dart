@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:kleyboardshop/screens/signin_screen.dart';
-import 'package:kleyboardshop/widgets/bottom_menu_bar.dart';
+import 'package:team2_keyboardshop_flutter/screens/signin_screen.dart';
+import 'package:team2_keyboardshop_flutter/widgets/bottom_menu_bar.dart';
 
 class SettingsPage extends StatefulWidget {
   static const routeName = '/setting';

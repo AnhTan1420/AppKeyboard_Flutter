@@ -1,10 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:kleyboardshop/screens/forgotpass_screen.dart';
-import 'package:kleyboardshop/screens/products_overview_screen.dart';
-import 'package:kleyboardshop/screens/signup_screen.dart';
-import 'package:kleyboardshop/widgets/input_text_widget.dart';
+import 'package:team2_keyboardshop_flutter/screens/forgotpass_screen.dart';
+import 'package:team2_keyboardshop_flutter/screens/products_overview_screen.dart';
+import 'package:team2_keyboardshop_flutter/screens/signup_screen.dart';
+import 'package:team2_keyboardshop_flutter/widgets/input_text_widget.dart';
 
 class LoginScreen extends StatefulWidget {
    LoginScreen() : super();
@@ -99,7 +98,6 @@ class _SearchScreenState extends State<LoginScreen> {
                         Navigator.of(context)
                             .pushReplacementNamed(ProductsOverviewScreen.routeName);
                     }
-                    Get.to(const ProductsOverviewScreen());
                   },
                   style: ElevatedButton.styleFrom(
                     primary: Colors.white,

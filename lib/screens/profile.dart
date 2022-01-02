@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:kleyboardshop/screens/products_overview_screen.dart';
+import 'package:team2_keyboardshop_flutter/screens/products_overview_screen.dart';
 
 class ProFile extends StatefulWidget {
   const ProFile({Key? key}) : super(key: key);
