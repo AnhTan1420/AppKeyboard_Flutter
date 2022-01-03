@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:kleyboardshop/screens/signin_screen.dart';
-import 'package:kleyboardshop/widgets/input_text_widget.dart';
+import 'package:team2_keyboardshop_flutter/screens/signin_screen.dart';
+import 'package:team2_keyboardshop_flutter/widgets/input_text_widget.dart';
 
 class ForgotScreen extends StatefulWidget {
   ForgotScreen() : super();
